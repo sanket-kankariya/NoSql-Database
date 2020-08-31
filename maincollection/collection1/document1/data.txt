@@ -1,0 +1,4 @@
+name: Ashley
+age: 18
+gender: Male
+city: Irvine
