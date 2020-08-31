@@ -1,0 +1,10 @@
+discription: "cool place to visit"
+likes:	{
+		daniel:true
+	}
+location: "moscow,russia"
+mediaUrl: "https://firebasestorage.googleapis.com/v0/b/htmltest-d748a.appspot.com/o/post_20b4583d-f507-4df0-92ee-add7cb36fcd8.jpg?alt=media&token=0ded34e0-e9fc-4577-9701-62b49a85c503"
+ownerId: "106748330026035524925"
+postId: "20b4583d-f507-4df0-92ee-add7cb36fcd8"
+timeStamp: June 19, 2020 at 7:22:53 AM UTC+5:30
+userName: "dev"

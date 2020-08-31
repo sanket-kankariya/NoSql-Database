@@ -33,8 +33,12 @@ function viewCollections() {
 
     echo 'which collection do you want to open'
     read cname
-
-    viewDocuments $cname
+    # if [[ $cname = 'back' ]]
+    # then
+    #     cd ..
+    # else
+        viewDocuments $cname
+    # fi
 
     # ls /mnt/d/Projects/Shell/DatabaseProject/maincollection
 
@@ -54,7 +58,13 @@ function viewDocuments() {
     echo 'which Document do you want to view'
     read cname
 
-    viewCollections $cname
+    # if [[ $cname = 'back' ]]
+    # then
+    #     cd ..
+    # else
+        viewCollections $cname
+    # fi
+    
     # ls /mnt/d/Projects/Shell/DatabaseProject/maincollection
 
 }
