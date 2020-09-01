@@ -40,7 +40,7 @@ function viewCollections() {
         viewDocuments $cname
     # fi
 
-    # ls /mnt/d/Projects/Shell/DatabaseProject/maincollection
+    # ls /mnt/d/Projects/Shell/DatabaseProject/database
 
 }
 
@@ -65,13 +65,41 @@ function viewDocuments() {
         viewCollections $cname
     # fi
     
-    # ls /mnt/d/Projects/Shell/DatabaseProject/maincollection
+    # ls /mnt/d/Projects/Shell/DatabaseProject/database
 
+}
+
+function readQuery() {
+    clear
+    echo 'EnterQuery'
+    read -a query
+    processQuery ${query[@]}
+}
+
+function processQuery() {
+    args=("$@")
+    data='data'
+    for i in ${args[@]}
+    do
+        if [ $i = 'data' ]
+        then
+            if [ -f "data.txt" ]
+            then
+                echo 'Data in the Document:-'
+                while IFS= read -r line
+                do
+                echo "$line"
+            done < data.txt
+        fi
+        else
+            cd $i/
+        fi
+    done
 }
 
 PS3="Enter a number: "
 
-select os in CreateDocument ViewCollections
+select os in CreateDocument ViewCollections EnterQuery
 do
 
 case $os in
@@ -80,7 +108,11 @@ case $os in
     ;;
 
     "ViewCollections")
-    viewCollections maincollection
+    viewCollections database
+    ;;
+
+    "EnterQuery")
+    readQuery
     ;;
 
     *)
