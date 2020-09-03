@@ -78,7 +78,6 @@ function readQuery() {
 
 function processQuery() {
     args=("$@")
-    data='data'
     for i in ${args[@]}
     do
         if [ $i = 'data' ]
